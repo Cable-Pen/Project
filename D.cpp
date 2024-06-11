@@ -31,6 +31,9 @@ class vector{
             else
             array[iindex]=value;
         }
+        void getsize(){
+            cout<<size;
+        }
         void popback(){
              size=size-1;
             T *newarray=new T[size];
