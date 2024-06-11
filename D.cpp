@@ -34,6 +34,12 @@ class vector{
         void getsize(){
             cout<<size;
         }
+        T getindex(int ind){
+            if(ind<0||ind>=size)
+                cout<<"invalid index";
+            else
+                return array[ind];
+        }
         void popback(){
              size=size-1;
             T *newarray=new T[size];
