@@ -1,17 +1,18 @@
 #include <iostream>
 
+template<typename T>
 class vector{
     private:
         int size;
-        int* array;
+        T* array;
     public:
         vector(){
             size=0;
-            array= new int[size];
+            array= new T[size];
         }
         void resize(int newsize){
             size=newsize;
-            int *newarray=new int[size];
+            T *newarray=new T[size];
             for(int i=0;i<size;i++){
                 cin>>newarray[i];
                 }
@@ -24,7 +25,7 @@ class vector{
                 cout<<array[i];
             cout<<"size= "<<size<<endl;
             }
-        void swap(int value,int iindex){
+        void swap(T value,int iindex){
             if (iindex>=size)
                 cout<<"invalid index";
             else
@@ -32,7 +33,7 @@ class vector{
         }
         void popback(){
              size=size-1;
-            int *newarray=new int[size];
+            T *newarray=new T[size];
             for(int i=0;i<size;i++)
             {
             newarray[i]=array[i];
@@ -42,7 +43,7 @@ class vector{
         }
         void pushback(){
              size=size+1;
-            int *newarray=new int[size];
+            T *newarray=new T[size];
             for(int i=0;i<size-1;i++)
             {
             newarray[i]=array[i];
